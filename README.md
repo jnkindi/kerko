@@ -344,11 +344,16 @@ override their default value:
   `False` (abstracts are hidden).
 * `KERKO_RESULTS_ABSTRACTS_TOGGLER`: Show a button letting users show or hide
   abstracts on search results pages. Defaults to `True` (toggle is displayed).
-* `KERKO_RESULTS_FIELDS`: List of item fields to retrieve for use in search
-  results pages (i.e. in the `KERKO_TEMPLATE_SEARCH` template). Values are keys
-  identifying fields or facets assigned to the `kerko.composer.Composer`
-  instance. Defaults to `['id', 'bib', 'coins', 'data']`. Be careful when
-  overriding this as the default fields may be required by some functions.
+* `KERKO_RESULTS_ATTACHMENT_LINKS`: Provide links to attachments in search
+  results. Defaults to `True`.
+* `KERKO_RESULTS_URL_LINKS`: Provide links to online resources in search
+  results (for items whose URL field has a value). Defaults to `True`.
+* `KERKO_RESULTS_FIELDS`: List of item fields to retrieve for search results
+  (most notably used by the `KERKO_TEMPLATE_SEARCH_ITEM` template). Values in
+  this list are keys identifying fields defined in the `kerko.composer.Composer`
+  instance. One probably only needs to change the default list when overriding
+  the template to display additional fields. Note that some fields from the
+  default list may be required by other Kerko functions.
 * `KERKO_TEMPLATE_SEARCH`: Name of the Jinja2 template to render for the search
   page with list of results. Defaults to `kerko/search.html.jinja2`.
 * `KERKO_TEMPLATE_SEARCH_ITEM`: Name of the Jinja2 template to render for the

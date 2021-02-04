@@ -51,8 +51,10 @@ def init_default_config(state):
     state.app.config.setdefault('KERKO_RESULTS_ABSTRACTS', False)
     state.app.config.setdefault('KERKO_RESULTS_ABSTRACTS_TOGGLER', True)
     state.app.config.setdefault(
-        'KERKO_RESULTS_FIELDS', ['id', 'attachments', 'bib', 'coins', 'data']
+        'KERKO_RESULTS_FIELDS', ['id', 'attachments', 'bib', 'coins', 'data', 'url']
     )
+    state.app.config.setdefault('KERKO_RESULTS_ATTACHMENT_LINKS', True)
+    state.app.config.setdefault('KERKO_RESULTS_URL_LINKS', True)
     state.app.config.setdefault('KERKO_FACET_COLLAPSING', False)
     state.app.config.setdefault('KERKO_PRINT_ITEM_LINK', False)
     state.app.config.setdefault('KERKO_PRINT_CITATIONS_LINK', False)
