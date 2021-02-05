@@ -1,5 +1,25 @@
 # Changelog
 
+## 0.7.1 (2021-02-04)
+
+Security fixes:
+
+* Fix unescaped date fields, causing a vulnerability to XSS attacks. This
+  vulnerability was introduced in version 0.7.
+
+Bug fixes:
+
+* Fix wrong locale separator in the HTML lang attribute.
+
+Other changes:
+
+* Remove unwanted spacing after dropdown labels.
+
+Documentation changes:
+
+* Fix missing info about library groupID in configuration docs. Thanks
+  [@drmikeuk](https://github.com/drmikeuk) for reporting the issue.
+
 ## 0.7 (2021-01-08)
 
 *Warning:* Upgrading from version 0.6 or earlier will require that you clean and
